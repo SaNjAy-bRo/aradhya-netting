@@ -33,6 +33,28 @@ h4 { font-weight: 800; }
   background: linear-gradient(135deg, #182F89 0%, #3A57E8 100%);
 }
 
+.btn-orange {
+  background-color: #f57c20;
+  color: #fff;
+  border: none;
+  transition: background 0.3s ease;
+}
+.btn-orange:hover {
+  background-color: #d66817;
+  color: #fff;
+}
+
+.btn-green {
+  background-color: #25D366;
+  color: #fff;
+  border: none;
+  transition: background 0.3s ease;
+}
+.btn-green:hover {
+  background-color: #1ebc5a;
+  color: #fff;
+}
+
 /* ===============================
    Layout Spacing
 ================================= */
