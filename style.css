@@ -1,0 +1,373 @@
+/* ===============================
+   Global Styles
+================================= */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #4A4A4A;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h4 { font-weight: 800; }
+
+/* ===============================
+   Brand Colors
+================================= */
+.btn-primary {
+  background-color: #38B6FF;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #199CE5;
+}
+.text-primary { color: #182F89 !important; }
+.text-blue { color: #38B6FF !important; }
+.bg-dark-blue {
+  background: linear-gradient(135deg, #182F89 0%, #3A57E8 100%);
+}
+
+/* ===============================
+   Layout Spacing
+================================= */
+.section-padding, .product-hero { padding: 3rem 0; }
+
+/* ===============================
+   Navbar
+================================= */
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { box-shadow: none; }
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 900 !important;
+  letter-spacing: -1px;
+}
+.navbar-brand .brand-accent {
+  color: #f57c20 !important;
+}
+.navbar.sticky-top {
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  top: 0;
+}
+.navbar .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Full-width top strip */
+.bg-dark-blue.text-white.py-2.small {
+  background: linear-gradient(135deg, #182F89 0%, #3A57E8 100%) !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.bg-dark-blue.text-white.py-2.small > .container {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.phone-mobile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #25D366; /* Green */
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.phone-mobile-icon:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-mobile-icon {
+  background: #25d366;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+.mobile-nav-actions .navbar-toggler {
+  border: 1px solid #c9d2e6;
+  border-radius: 10px;
+  padding: 0.32rem 0.5rem;
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .navbar .container {
+    row-gap: 10px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-collapse.show {
+    background: #ffffff;
+    border: 1px solid #dfe7f5;
+    border-radius: 14px;
+    padding: 12px 12px 8px;
+    box-shadow: 0 16px 30px rgba(6, 30, 89, 0.12);
+  }
+
+  .navbar-collapse .navbar-nav {
+    gap: 6px;
+  }
+
+  .navbar-collapse .nav-link {
+    border-radius: 10px;
+    padding: 0.62rem 0.75rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+
+  .navbar-collapse .dropdown-menu {
+    position: static !important;
+    float: none;
+    border: 0;
+    box-shadow: none;
+    padding: 4px 0 0 10px;
+    margin-top: 2px;
+  }
+
+  .navbar-collapse .dropdown-item {
+    border-radius: 8px;
+    padding: 0.48rem 0.7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  #navbarNav {
+    width: auto !important;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  #navbarNav .navbar-nav {
+    justify-content: flex-end;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .navbar .d-none.d-lg-flex {
+    flex: 0 0 auto;
+  }
+
+  .navbar .d-none.d-lg-flex a {
+    white-space: nowrap;
+  }
+}
+
+/* ===============================
+   Hero Section
+================================= */
+.hero-section {
+  position: relative;
+  background: url('images/hero-fallback.png') center/cover no-repeat;
+  color: #fff;
+}
+.hero-bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+.hero-section .container { position: relative; z-index: 2; }
+@media (max-width: 767px) {
+  .hero-bg-video { display: none !important; }
+}
+
+/* ===============================
+   Product Cards
+================================= */
+.product-card {
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+}
+.product-card .card-body { text-align: left; }
+
+
+/* Product Page Hero Section */
+.product-hero {
+  position: relative;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay with gradient */
+.product-hero-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(to right, #182F89BF 0%, #182F89F2 100%);
+  /* BF = 75% opacity, F2 = 95% opacity */
+}
+
+/* Product Highlights */
+.product-highlight {
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.product-highlight i {
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+}
+.product-highlight h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+
+
+/* ===============================
+   CTA Sections
+================================= */
+.cta-section-dark {
+  background: linear-gradient(135deg, #182F89 0%, #0D1B2A 100%);
+}
+.cta-section-dark h5 {
+  font-weight: 600;
+  margin: 0;
+}
+.cta-section-dark .btn-primary {
+  background-color: #38B6FF;
+  border: none;
+  transition: background 0.3s ease;
+}
+.cta-section-dark .btn-primary:hover {
+  background-color: #199CE5;
+}
+@media (max-width: 768px) {
+  .cta-section-dark .container { text-align: center; }
+}
+
+/* ===============================
+   Footer
+================================= */
+footer {
+  background-color: #0D1B2A;
+  color: #ffffff;
+}
+.social a {
+  color: #38B6FF;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+/* ===============================
+   Testimonials
+================================= */
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+.stars {
+  color: #FFC107;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   Video Cards
+================================= */
+.video-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  .video-card { border-radius: 8px; }
+}
+
+/* ===============================
+   Floating WhatsApp
+================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
+}
+
+/* ===============================
+   Animations (Optional)
+================================= */
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
