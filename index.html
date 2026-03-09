@@ -657,12 +657,14 @@
         min-height: auto;
       }
 
-      .hero-bg-video {
-        display: none;
-      }
+
 
       .video-card video {
         aspect-ratio: 4 / 5;
+      }
+
+      .navbar-brand {
+        font-size: 1.35rem;
       }
 
       .navbar .container {
@@ -797,10 +799,10 @@
   </nav>
 
   <section class="hero-section d-flex align-items-center">
-    <video class="hero-bg-video d-none d-md-block" autoplay muted loop playsinline preload="auto">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
       <source src="videos/urban-invisible-grills-bg.mp4" type="video/mp4">
     </video>
-    <div class="hero-bg-image d-md-none"></div>
+
     <div class="hero-overlay"></div>
 
     <div class="container py-5">
