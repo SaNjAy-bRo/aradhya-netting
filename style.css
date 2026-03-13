@@ -537,3 +537,122 @@ footer a:hover {
     transform: translateY(0);
   }
 }
+
+/* ===============================
+   New Service Page Sections
+ ================================= */
+
+.specs-grid .spec-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.specs-grid .spec-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-blue);
+  box-shadow: 0 12px 30px rgba(15, 79, 207, 0.1);
+}
+
+.spec-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--brand-blue-soft);
+  color: var(--brand-blue);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 1.25rem;
+}
+
+.process-roadmap {
+  position: relative;
+}
+
+.roadmap-item {
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.roadmap-step-num {
+  width: 50px;
+  height: 50px;
+  background: var(--brand-orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 15px rgba(245, 124, 32, 0.3);
+}
+
+@media (min-width: 992px) {
+  .process-roadmap::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: dashed var(--border-light);
+    z-index: 1;
+  }
+}
+
+.roadmap-item h5 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: var(--brand-blue-dark);
+}
+
+.roadmap-item p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   Maintenance & Care Section
+ ================================= */
+
+.care-grid .care-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.care-grid .care-card:hover {
+  border-color: var(--brand-orange);
+  box-shadow: 0 10px 25px rgba(245, 124, 32, 0.08);
+}
+
+.care-icon {
+  font-size: 2rem;
+  color: var(--brand-orange);
+  margin-bottom: 1rem;
+}
+
+.care-card h6 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--brand-blue-dark);
+}
+
+.care-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
